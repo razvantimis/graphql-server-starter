@@ -7,14 +7,15 @@ import { getGraphqlServer } from "./app/graphql-server";
 import { ServerConfig } from "./server-config";
 import { getFirebaseApp } from "./utils/firebase";
 import { getLogger } from "./utils/logger";
+import { ApolloServer } from "apollo-server-koa";
 
 const logger = getLogger("Config app");
 
 export class AppServer {
-  private app: Application;
-  private graphqlServer: any;
-  private config: ServerConfig;
-  public listeningServer?: HttpServer;
+  app: Application;
+  config: ServerConfig;
+  graphqlServer?: ApolloServer;
+  listeningServer?: HttpServer;
 
   constructor(config: ServerConfig) {
     logger.info("Create KOA Server");
