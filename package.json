@@ -1,8 +1,7 @@
 {
-  "name": "squirrly-email-marketing-platform-api",
+  "name": "graphql-server",
   "version": "1.0.0",
   "main": "src/index.ts",
-  "repository": "git@bitbucket.org:transylvaniamobile/squirrly-email-marketing-platform-api.git",
   "author": "Razvan Timis <timisrazvanvasile@gmail.com>",
   "license": "MIT",
   "scripts": {
