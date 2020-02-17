@@ -1,0 +1,44 @@
+{
+  "name": "squirrly-email-marketing-platform-api",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "git@bitbucket.org:transylvaniamobile/squirrly-email-marketing-platform-api.git",
+  "author": "Razvan Timis <timisrazvanvasile@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --transpileOnly --respawn ./index.ts",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node -r ./bootstrap.js build/index.js"
+  },
+  "devDependencies": {
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__cors": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-graphql": "^3.1.1",
+    "module-alias": "^2.2.2",
+    "rimraf": "^3.0.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@koa/cors": "2",
+    "apollo-server-koa": "^2.10.1",
+    "dotenv-json": "^1.0.0",
+    "firebase-admin": "^8.9.2",
+    "graphql": "^14.6.0",
+    "json-dotenv": "^0.0.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "nexus": "^0.12.0-rc.11",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "_moduleAliases": {
+    "@app": "build/src/app/",
+    "@config": "build/src/server-config.js",
+    "@utils": "build/src/utils/"
+  }
+}
