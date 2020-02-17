@@ -16,6 +16,8 @@
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "eslint": "^6.8.0",
     "eslint-plugin-graphql": "^3.1.1",
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "module-alias": "^2.2.2",
     "rimraf": "^3.0.2",
     "tsconfig-paths": "^3.9.0",
@@ -40,5 +42,13 @@
     "@app": "build/src/app/",
     "@config": "build/src/server-config.js",
     "@utils": "build/src/utils/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js.ts}": "eslint --cache --fix"
   }
 }

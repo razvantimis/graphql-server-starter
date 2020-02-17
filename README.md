@@ -23,4 +23,4 @@ Includes:
 
 1. `yarn run dev` -- spins a dev server
 2. `yarn run build` -- compiles typescript code in `/build` folder
-3. `yarn start` -- starts production server from `/dist` folder
+3. `yarn start` -- starts production server from `/build` folder
