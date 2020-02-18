@@ -7,9 +7,13 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --transpileOnly --respawn ./index.ts",
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node -r ./bootstrap.js build/index.js"
+    "start": "npm run build && node -r ./bootstrap.js build/index.js",
+    "gql-gen": "gql-gen --config codegen.yml"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.12.2",
+    "@graphql-codegen/typescript": "^1.12.2",
+    "@graphql-codegen/typescript-resolvers": "^1.12.2",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa__cors": "^3.0.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
